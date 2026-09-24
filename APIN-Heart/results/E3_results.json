@@ -1,0 +1,102 @@
+{
+  "summary": [
+    {
+      "theta": 0.05,
+      "rep_mean": 0.9223333333333332,
+      "rep_std": 0.0021376258897301006,
+      "auc_rel_mean": 1.0010756097635318,
+      "auc_rel_std": 0.0035612435863275403,
+      "time_s_mean": 1.4967303276062012
+    },
+    {
+      "theta": 0.1,
+      "rep_mean": 0.9496666666666667,
+      "rep_std": 0.0011606990230986747,
+      "auc_rel_mean": 1.00421356831664,
+      "auc_rel_std": 0.0028022379192515017,
+      "time_s_mean": 2.892864799499512
+    },
+    {
+      "theta": 0.15,
+      "rep_mean": 0.9650833333333333,
+      "rep_std": 0.001035481637800621,
+      "auc_rel_mean": 1.0015892390470937,
+      "auc_rel_std": 0.002549860958868858,
+      "time_s_mean": 4.243158864974975
+    },
+    {
+      "theta": 0.2,
+      "rep_mean": 0.9772166666666667,
+      "rep_std": 0.0008209073570683071,
+      "auc_rel_mean": 1.0005317850788071,
+      "auc_rel_std": 0.002431256572866653,
+      "time_s_mean": 5.486167049407959
+    },
+    {
+      "theta": 0.3,
+      "rep_mean": 0.9899000000000001,
+      "rep_std": 0.0007156970184527821,
+      "auc_rel_mean": 1.0005317850788071,
+      "auc_rel_std": 0.002431256572866653,
+      "time_s_mean": 8.008510637283326
+    },
+    {
+      "theta": 0.4,
+      "rep_mean": 1.0,
+      "rep_std": 0.0,
+      "auc_rel_mean": 1.0007918537451586,
+      "auc_rel_std": 0.0026974761829827577,
+      "time_s_mean": 9.933828496932984
+    },
+    {
+      "theta": 0.5,
+      "rep_mean": 1.0,
+      "rep_std": 0.0,
+      "auc_rel_mean": 0.9997389033942559,
+      "auc_rel_std": 0.0005221932114882311,
+      "time_s_mean": 11.93010926246643
+    },
+    {
+      "theta": 0.6,
+      "rep_mean": 1.0,
+      "rep_std": 0.0,
+      "auc_rel_mean": 1.0,
+      "auc_rel_std": 0.0,
+      "time_s_mean": 13.288498544692994
+    },
+    {
+      "theta": 0.7,
+      "rep_mean": 1.0,
+      "rep_std": 0.0,
+      "auc_rel_mean": 1.0,
+      "auc_rel_std": 0.0,
+      "time_s_mean": 14.706128978729248
+    },
+    {
+      "theta": 0.8,
+      "rep_mean": 1.0,
+      "rep_std": 0.0,
+      "auc_rel_mean": 1.0,
+      "auc_rel_std": 0.0,
+      "time_s_mean": 15.62010736465454
+    },
+    {
+      "theta": 0.9,
+      "rep_mean": 1.0,
+      "rep_std": 0.0,
+      "auc_rel_mean": 1.0,
+      "auc_rel_std": 0.0,
+      "time_s_mean": 15.333246660232543
+    },
+    {
+      "theta": 1.0,
+      "rep_mean": 1.0,
+      "rep_std": 0.0,
+      "auc_rel_mean": 1.0,
+      "auc_rel_std": 0.0,
+      "time_s_mean": 0.0
+    }
+  ],
+  "theta_at_coverage_threshold": 0.05,
+  "knee_theta": 0.8
+}
