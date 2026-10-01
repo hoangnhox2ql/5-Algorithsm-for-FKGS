@@ -1,0 +1,79 @@
+RUN 20260926T112613-383fbf90 | dataset=heart | quick=False | steps=['PREPROCESS', 'E1', 'E2', 'E3', 'E4', 'REPORT']
+
+############################################################
+# PREPROCESS
+############################################################
+  Nguồn: real (data/heart/Data.csv), sha256=948420b084d8a3a0ca42b8419fce9aee175879e43f8aedf712377899a67aa49b
+  918 dòng -> 918 sau loại 0 trùng; nhãn {'0': 410, '1': 508}; X trùng khác nhãn: 0
+
+############################################################
+# E1
+############################################################
+  E1 n=10 xong
+  E1 n=14 xong
+  E1 n=18 xong
+  Vi phạm: {'greedy': 0, 'sfkgs': 0, 'cfkgs': 0, 'sfkgs_decomposition': 0, 'cfkgs_negative_g': 0, 'chain': 0, 'classdev_sfkgs': np.int64(0), 'classdev_cfkgs': np.int64(0), 'greedy_above_opt': 0, 'size_mismatch': 0}
+
+############################################################
+# E2
+############################################################
+  E2 fold 0 theta=0.05 xong
+  E2 fold 0 theta=0.1 xong
+  E2 fold 0 theta=0.2 xong
+  E2 fold 0 theta=0.3 xong
+  E2 fold 0 theta=0.5 xong
+  E2 fold 1 theta=0.05 xong
+  E2 fold 1 theta=0.1 xong
+  E2 fold 1 theta=0.2 xong
+  E2 fold 1 theta=0.3 xong
+  E2 fold 1 theta=0.5 xong
+  E2 fold 2 theta=0.05 xong
+  E2 fold 2 theta=0.1 xong
+  E2 fold 2 theta=0.2 xong
+  E2 fold 2 theta=0.3 xong
+  E2 fold 2 theta=0.5 xong
+  E2 fold 3 theta=0.05 xong
+  E2 fold 3 theta=0.1 xong
+  E2 fold 3 theta=0.2 xong
+  E2 fold 3 theta=0.3 xong
+  E2 fold 3 theta=0.5 xong
+  E2 fold 4 theta=0.05 xong
+  E2 fold 4 theta=0.1 xong
+  E2 fold 4 theta=0.2 xong
+  E2 fold 4 theta=0.3 xong
+  E2 fold 4 theta=0.5 xong
+
+############################################################
+# E3
+############################################################
+  E3 fold 0 GreedyFKGS: theta*=0.3, test AUC=0.8441 (FKG đầy đủ 0.8391)
+  E3 fold 0 SFKGS: theta*=0.4, test AUC=0.8443 (FKG đầy đủ 0.8391)
+  E3 fold 0 CFKGS: theta*=0.4, test AUC=0.8228 (FKG đầy đủ 0.8391)
+  E3 fold 1 GreedyFKGS: theta*=0.6, test AUC=0.7826 (FKG đầy đủ 0.7895)
+  E3 fold 1 SFKGS: theta*=0.6, test AUC=0.7863 (FKG đầy đủ 0.7895)
+  E3 fold 1 CFKGS: theta*=0.2, test AUC=0.7527 (FKG đầy đủ 0.7895)
+  E3 fold 2 GreedyFKGS: theta*=0.6, test AUC=0.7760 (FKG đầy đủ 0.7756)
+  E3 fold 2 SFKGS: theta*=0.3, test AUC=0.7490 (FKG đầy đủ 0.7756)
+  E3 fold 2 CFKGS: theta*=0.5, test AUC=0.7764 (FKG đầy đủ 0.7756)
+  E3 fold 3 GreedyFKGS: theta*=0.4, test AUC=0.8115 (FKG đầy đủ 0.7641)
+  E3 fold 3 SFKGS: theta*=0.3, test AUC=0.7601 (FKG đầy đủ 0.7641)
+  E3 fold 3 CFKGS: theta*=0.7, test AUC=0.8019 (FKG đầy đủ 0.7641)
+  E3 fold 4 GreedyFKGS: theta*=0.7, test AUC=0.7910 (FKG đầy đủ 0.7965)
+  E3 fold 4 SFKGS: theta*=0.6, test AUC=0.7967 (FKG đầy đủ 0.7965)
+  E3 fold 4 CFKGS: theta*=0.8, test AUC=0.7942 (FKG đầy đủ 0.7965)
+
+############################################################
+# E4
+############################################################
+  E4 fold 0 xong
+  E4 fold 1 xong
+  E4 fold 2 xong
+  E4 fold 3 xong
+  E4 fold 4 xong
+
+############################################################
+# REPORT
+############################################################
+  Đã tạo /home/claude/fkgs_v3/results/heart/report_tong_hop.md
+
+HOÀN TẤT 20260926T112613-383fbf90 trong 0.9 phút
