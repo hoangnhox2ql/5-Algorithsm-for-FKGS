@@ -1,0 +1,114 @@
+>>> CHẾ ĐỘ NHANH: giảm epochs=15, n_seeds=2, thu nhỏ lưới quét để kiểm tra pipeline không lỗi (không dùng để báo cáo chính thức).
+
+
+======================================================================
+KB1: FKG-E vs FISA trên FKG gốc (Diabetes-Kaggle, Healthcare-Diabetes, BRSET)
+======================================================================
+
+-- Diabetes-Kaggle --
+  [Diabetes-Kaggle] !! CHƯA TÌM THẤY dữ liệu thật tại '/home/claude/fkge/fkge_v3/data_real/diabetes_kaggle_rules.json'. Dùng DỮ LIỆU TỔNG HỢP để kiểm thử pipeline.
+  !! CẢNH BÁO: FKG-E (Diabetes-Kaggle, seed=0) có accuracy=0.6500, KHÔNG vượt rõ rệt baseline lớp đa số (0.6375, luôn đoán 'class-0'). Kiểm tra độ chính xác cân bằng và ngưỡng quyết định.
+  FISA (FKG-Pairs k=3): acc=0.6250  bacc=0.6538  f1=0.6229  AUC=0.7241379310344828  bảng tra 0.0322 ms/query, tuần tự 0.1537 ms/query
+  FKG-E: acc=0.6562±0.0062  f1=0.6229±0.0038  bacc=0.6225  đồng thuận=0.7688  Dev=0.4567  0.0524 ms/query  (so với FISA bảng tra 0.61x, so với FISA tuần tự 2.93x)
+
+-- Healthcare-Diabetes-Kaggle --
+  [Healthcare-Diabetes-Kaggle] !! CHƯA TÌM THẤY dữ liệu thật tại '/home/claude/fkge/fkge_v3/data_real/healthcare_diabetes_rules.json'. Dùng DỮ LIỆU TỔNG HỢP để kiểm thử pipeline.
+  !! CẢNH BÁO: FKG-E (Healthcare-Diabetes-Kaggle, seed=0) có accuracy=0.6000, KHÔNG vượt rõ rệt baseline lớp đa số (0.7125, luôn đoán 'class-0'). Kiểm tra độ chính xác cân bằng và ngưỡng quyết định.
+  !! CẢNH BÁO: FKG-E (Healthcare-Diabetes-Kaggle, seed=1) có accuracy=0.5625, KHÔNG vượt rõ rệt baseline lớp đa số (0.7125, luôn đoán 'class-0'). Kiểm tra độ chính xác cân bằng và ngưỡng quyết định.
+  FISA (FKG-Pairs k=3): acc=0.6250  bacc=0.6331  f1=0.6000  AUC=0.6979405034324943  bảng tra 0.0314 ms/query, tuần tự 0.1596 ms/query
+  FKG-E: acc=0.5813±0.0187  f1=0.5646±0.0027  bacc=0.6283  đồng thuận=0.7312  Dev=0.4728  0.0553 ms/query  (so với FISA bảng tra 0.57x, so với FISA tuần tự 2.89x)
+
+-- BRSET (FKG-MM) --
+  [BRSET (FKG-MM)] !! CHƯA TÌM THẤY dữ liệu thật tại '/home/claude/fkge/fkge_v3/data_real/brset_fkgmm_rules.json'. Dùng DỮ LIỆU TỔNG HỢP để kiểm thử pipeline.
+  FISA (FKG-Pairs k=3): acc=0.7500  bacc=0.7552  f1=0.7460  AUC=0.826171875  bảng tra 0.0346 ms/query, tuần tự 0.1627 ms/query
+  FKG-E: acc=0.6750±0.0500  f1=0.6744±0.0504  bacc=0.7057  đồng thuận=0.8500  Dev=0.4089  0.0548 ms/query  (so với FISA bảng tra 0.63x, so với FISA tuần tự 2.97x)
+
+======================================================================
+KB2: FKG-E vs FISA trên FKGS đã lấy mẫu (Chương 2)
+======================================================================
+  [BRSET (FKG-MM đầy đủ)] !! CHƯA TÌM THẤY dữ liệu thật tại '/home/claude/fkge/fkge_v3/data_real/brset_fkgmm_rules.json'. Dùng DỮ LIỆU TỔNG HỢP để kiểm thử pipeline.
+  !! CHƯA TÌM THẤY FKGS thật tại '/home/claude/fkge/fkge_v3/data_real/brset_fkgs_rules.json'. Mô phỏng bằng cách lấy mẫu ngẫu nhiên 30% số luật gốc.
+
+-- FKG-MM đầy đủ (250 luật) --
+  FISA:  acc=0.7500  0.0326 ms/query
+  FKG-E: acc=0.6750±0.0500  0.0577 ms/query  (speedup=0.57x)
+
+-- FKGS đã nén (75 luật) --
+  FISA:  acc=0.6750  0.0350 ms/query
+  FKG-E: acc=0.6562±0.0312  0.0441 ms/query  (speedup=0.79x)
+
+>>> Speedup trên FKG-MM đầy đủ: 0.57x
+>>> Speedup trên FKGS đã nén:   0.79x
+>>> Kết luận KB2: CỘNG HƯỞNG (speedup tăng thêm khi kết hợp FKGS+FKG-E)
+
+======================================================================
+KB3: Độ nhạy theo chiều nhúng d ∈ [8, 32]
+======================================================================
+!! Chưa có BRSET thật -- dùng dữ liệu tổng hợp cho KB3/KB5.
+  d=   8: accuracy=0.4375±0.1125  TG suy diễn=0.0482ms  TG huấn luyện=0.29s
+  d=  32: accuracy=0.6188±0.0563  TG suy diễn=0.0558ms  TG huấn luyện=0.40s
+
+======================================================================
+KB5: Độ nhạy theo (w, K) skip-gram — w∈[None, 2], K∈[2, 5]
+======================================================================
+!! Chưa có BRSET thật -- dùng dữ liệu tổng hợp cho KB3/KB5.
+  đồng xuất hiện=toàn luật K= 2: accuracy=0.6813±0.0062
+  đồng xuất hiện=toàn luật K= 5: accuracy=0.6188±0.0563
+  đồng xuất hiện=cửa sổ w=2 K= 2: accuracy=0.6438±0.0688
+  đồng xuất hiện=cửa sổ w=2 K= 5: accuracy=0.6875±0.0375
+
+======================================================================
+KB4: Quét lưới (λ_I=[0.3, 1.0], λ_P=[0.3, 1.0]) — đánh đổi giữa độ nhất quán với FISA và dự đoán
+======================================================================
+!! Chưa có BRSET thật -- dùng dữ liệu tổng hợp.
+  λ_I=0.3 λ_P=0.3 (ρ=1.00): accuracy=0.4812  đồng thuận FISA=0.5938  Dev=0.5667
+  λ_I=0.3 λ_P=1.0 (ρ=0.30): accuracy=0.6500  đồng thuận FISA=0.7750  Dev=0.4542
+  λ_I=1.0 λ_P=0.3 (ρ=3.33): accuracy=0.5875  đồng thuận FISA=0.7625  Dev=0.4642
+  λ_I=1.0 λ_P=1.0 (ρ=1.00): accuracy=0.6188  đồng thuận FISA=0.8062  Dev=0.4470
+
+======================================================================
+KB6: Khả năng mở rộng quy mô — tỉ lệ mẫu [0.4, 1.0]
+======================================================================
+!! Chưa có BRSET thật -- dùng dữ liệu tổng hợp.
+  |R|= 100 (tỉ lệ 40%): FISA bảng tra=0.0361ms  FISA tuần tự=0.1421ms  FKG-E=0.0454ms
+  |R|= 250 (tỉ lệ 100%): FISA bảng tra=0.0353ms  FISA tuần tự=0.1688ms  FKG-E=0.0581ms
+
+======================================================================
+Ablation Study cho FKG-E (theo hàm mục tiêu (3.28))
+======================================================================
+!! Chưa có BRSET thật -- dùng dữ liệu tổng hợp cho Ablation.
+  Full FKG-E                            : acc=0.6188  bacc=0.6528  AUC=0.7219  log_loss=0.6235  đồng thuận FISA=0.8062  Dev=0.4470
+  Bỏ L_pred (λ_P = 0)                   : acc=0.5750  bacc=0.5954  AUC=0.6613  log_loss=0.6389  đồng thuận FISA=0.6750  Dev=0.5137
+  Bỏ L_inf (λ_I = 0)                    : acc=0.5250  bacc=0.5983  AUC=0.6211  log_loss=0.6447  đồng thuận FISA=0.6500  Dev=0.5472
+  Bỏ L_rule (λ_R = 0)                   : acc=0.6750  bacc=0.6944  AUC=0.7208  log_loss=0.6079  đồng thuận FISA=0.8250  Dev=0.4555
+  Bỏ cấu trúc (λ_S = λ_E = λ_N = 0)     : acc=0.5312  bacc=0.5580  AUC=0.6132  log_loss=0.6667  đồng thuận FISA=0.6937  Dev=0.5327
+  Gộp trung bình đều (α = r/(r+1))      : acc=0.6062  bacc=0.6734  AUC=0.6944  log_loss=0.6141  đồng thuận FISA=0.8188  Dev=0.4108
+  Đồng xuất hiện theo cửa sổ (w = 2)    : acc=0.6875  bacc=0.7037  AUC=0.7269  log_loss=0.6190  đồng thuận FISA=0.7750  Dev=0.4637
+
+======================================================================
+Bảng so sánh tổng hợp: FISA / FKG-E / Node2Vec / TransE / DistMult
+======================================================================
+!! Chưa có BRSET thật -- dùng dữ liệu tổng hợp cho so sánh baseline.
+  FISA         : acc=0.6375  f1=0.6329  train=0.002s  infer=0.0274ms
+  Node2Vec+kNN : acc=0.6375  f1=0.5514  train=1.396s  infer=0.0292ms
+  TransE+kNN   : acc=0.6562  f1=0.5651  train=0.323s  infer=0.0255ms
+  DistMult+kNN : acc=0.6875  f1=0.6214  train=0.634s  infer=0.0268ms
+  FKG-E        : acc=0.6188  f1=0.6054  train=0.350s  infer=0.0472ms
+
+======================================================================
+HOÀN TẤT TOÀN BỘ THỰC NGHIỆM trong 0.4 phút.
+======================================================================
+
+Đang sinh báo cáo tổng hợp (bảng + biểu đồ)...
+Traceback (most recent call last):
+  File "/home/claude/fkge/fkge_v3/run_all.py", line 112, in <module>
+    main()
+  File "/home/claude/fkge/fkge_v3/run_all.py", line 108, in main
+    gen_report()
+  File "/home/claude/fkge/fkge_v3/report/generate_report.py", line 294, in main
+    md, fig = report_kb5()
+              ^^^^^^^^^^^^
+  File "/home/claude/fkge/fkge_v3/report/generate_report.py", line 177, in report_kb5
+    ws = sorted(set(r["w"] for r in data))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'

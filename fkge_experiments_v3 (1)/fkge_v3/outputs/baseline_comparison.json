@@ -1,0 +1,37 @@
+[
+  {
+    "method": "FISA (Chương 2)",
+    "accuracy": 0.6375,
+    "f1": 0.6328532995727172,
+    "train_time_s": 0.0026369094848632812,
+    "avg_ms_per_query": 0.04411637783050537
+  },
+  {
+    "method": "Node2Vec + kNN",
+    "accuracy": 0.6174999999999999,
+    "f1": 0.5631349250247875,
+    "train_time_s": 2.8691590309143065,
+    "avg_ms_per_query": 0.04524648189544678
+  },
+  {
+    "method": "TransE + kNN",
+    "accuracy": 0.545,
+    "f1": 0.47147179429479247,
+    "train_time_s": 0.549519395828247,
+    "avg_ms_per_query": 0.03913700580596924
+  },
+  {
+    "method": "DistMult + kNN",
+    "accuracy": 0.635,
+    "f1": 0.5759142749677018,
+    "train_time_s": 1.0747453212738036,
+    "avg_ms_per_query": 0.0455927848815918
+  },
+  {
+    "method": "FKG-E (đề xuất)",
+    "accuracy": 0.605,
+    "f1": 0.5878380114902226,
+    "train_time_s": 0.49002642631530763,
+    "avg_ms_per_query": 0.08159995079040527
+  }
+]

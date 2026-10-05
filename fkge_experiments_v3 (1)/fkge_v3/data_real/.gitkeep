@@ -1,0 +1,6 @@
+Đặt các file dữ liệu thật vào đây theo đúng tên đã quy định trong config.py:
+  - brset_fkgmm_rules.json + brset_test.json
+  - diabetes_kaggle_rules.json + diabetes_kaggle_test.json
+  - healthcare_diabetes_rules.json + healthcare_diabetes_test.json
+  - brset_fkgs_rules.json (luật đã lấy mẫu bởi FKGS, Chương 2)
+Xem định dạng chi tiết trong README.md và data/fkg_io.py

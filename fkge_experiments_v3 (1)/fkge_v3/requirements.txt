@@ -1,0 +1,4 @@
+numpy
+autograd>=1.6
+matplotlib
+pytest

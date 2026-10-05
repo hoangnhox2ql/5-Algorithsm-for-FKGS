@@ -1,0 +1,305 @@
+{
+  "config": {
+    "F_c": 5,
+    "val_fraction": 0.2,
+    "seed": 42,
+    "n_seq_timing": 50,
+    "T_ep": 10
+  },
+  "folds": [
+    {
+      "fold": "fold_01",
+      "info": {
+        "fold": "fold_01",
+        "n_attr": 16,
+        "n_train": 1778,
+        "n_test": 242,
+        "n_groups": 1074,
+        "n_duplicate_rows": 704,
+        "train_pos": 889,
+        "test_pos": 20
+      },
+      "FISA": {
+        "auc": 0.865990990990991,
+        "accuracy": 0.34710743801652894,
+        "balanced_accuracy": 0.5986486486486486,
+        "sensitivity": 0.9,
+        "specificity": 0.2972972972972973,
+        "precision": 0.10344827586206896,
+        "f1_pos": 0.18556701030927833,
+        "tp": 18,
+        "tn": 66,
+        "fp": 156,
+        "fn": 2,
+        "accuracy_argmax": 0.44214876033057854,
+        "balanced_accuracy_argmax": 0.6504504504504505,
+        "accuracy_ratio9": 0.08264462809917356,
+        "ms_per_query_table": 0.5709819557252994,
+        "ms_per_query_sequential": 13.424158096313477,
+        "threshold": -0.26553890447385875,
+        "n_unseen": 0
+      },
+      "FKGE": {
+        "auc": 0.9567567567567568,
+        "accuracy": 0.8016528925619835,
+        "balanced_accuracy": 0.8691441441441441,
+        "sensitivity": 0.95,
+        "specificity": 0.7882882882882883,
+        "precision": 0.2878787878787879,
+        "f1_pos": 0.44186046511627913,
+        "tp": 19,
+        "tn": 175,
+        "fp": 47,
+        "fn": 1,
+        "agreement_fisa": 0.5206611570247934,
+        "dev_rule": 0.5697983292972266,
+        "log_loss": 0.45427240296091825,
+        "ms_per_query": 0.13106322485553332,
+        "threshold": 0.02721744240618483,
+        "epochs": 10,
+        "stop": "T_ep",
+        "train_time_s": 7.946603536605835,
+        "final_grad_norm": 0.04655505414931528,
+        "teacher_T": 0.5
+      },
+      "time_s": 14.094627380371094
+    }
+  ],
+  "summary": {
+    "FISA": {
+      "auc": {
+        "mean": 0.865990990990991,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.865990990990991
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.5986486486486486,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.5986486486486486
+        ]
+      },
+      "sensitivity": {
+        "mean": 0.9,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.9
+        ]
+      },
+      "specificity": {
+        "mean": 0.2972972972972973,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.2972972972972973
+        ]
+      },
+      "f1_pos": {
+        "mean": 0.18556701030927833,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.18556701030927833
+        ]
+      },
+      "accuracy": {
+        "mean": 0.34710743801652894,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.34710743801652894
+        ]
+      },
+      "accuracy_argmax": {
+        "mean": 0.44214876033057854,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.44214876033057854
+        ]
+      },
+      "balanced_accuracy_argmax": {
+        "mean": 0.6504504504504505,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.6504504504504505
+        ]
+      },
+      "accuracy_ratio9": {
+        "mean": 0.08264462809917356,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.08264462809917356
+        ]
+      },
+      "ms_per_query_table": {
+        "mean": 0.5709819557252994,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.5709819557252994
+        ]
+      },
+      "ms_per_query_sequential": {
+        "mean": 13.424158096313477,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          13.424158096313477
+        ]
+      }
+    },
+    "FKGE": {
+      "auc": {
+        "mean": 0.9567567567567568,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.9567567567567568
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.8691441441441441,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.8691441441441441
+        ]
+      },
+      "sensitivity": {
+        "mean": 0.95,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.95
+        ]
+      },
+      "specificity": {
+        "mean": 0.7882882882882883,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.7882882882882883
+        ]
+      },
+      "f1_pos": {
+        "mean": 0.44186046511627913,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.44186046511627913
+        ]
+      },
+      "accuracy": {
+        "mean": 0.8016528925619835,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.8016528925619835
+        ]
+      },
+      "agreement_fisa": {
+        "mean": 0.5206611570247934,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.5206611570247934
+        ]
+      },
+      "dev_rule": {
+        "mean": 0.5697983292972266,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.5697983292972266
+        ]
+      },
+      "ms_per_query": {
+        "mean": 0.13106322485553332,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.13106322485553332
+        ]
+      },
+      "log_loss": {
+        "mean": 0.45427240296091825,
+        "sd": 0.0,
+        "ci95": [
+          NaN,
+          NaN
+        ],
+        "per_fold": [
+          0.45427240296091825
+        ]
+      }
+    }
+  }
+}

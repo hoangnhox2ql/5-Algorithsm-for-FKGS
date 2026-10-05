@@ -1,0 +1,42 @@
+[
+  {
+    "d": 8,
+    "accuracy_mean": 0.4875,
+    "accuracy_std": 0.13509256086106297,
+    "avg_ms_mean": 0.07066845893859863,
+    "train_time_s_mean": 0.3600527286529541,
+    "fisa_accuracy": 0.6375
+  },
+  {
+    "d": 16,
+    "accuracy_mean": 0.595,
+    "accuracy_std": 0.0682825014187383,
+    "avg_ms_mean": 0.09637117385864258,
+    "train_time_s_mean": 0.5191034793853759,
+    "fisa_accuracy": 0.6375
+  },
+  {
+    "d": 32,
+    "accuracy_mean": 0.605,
+    "accuracy_std": 0.07185053931599959,
+    "avg_ms_mean": 0.06862759590148926,
+    "train_time_s_mean": 0.5766465187072753,
+    "fisa_accuracy": 0.6375
+  },
+  {
+    "d": 64,
+    "accuracy_mean": 0.675,
+    "accuracy_std": 0.029580398915498088,
+    "avg_ms_mean": 0.2435016632080078,
+    "train_time_s_mean": 0.8376408100128174,
+    "fisa_accuracy": 0.6375
+  },
+  {
+    "d": 128,
+    "accuracy_mean": 0.6475000000000001,
+    "accuracy_std": 0.0644204936336256,
+    "avg_ms_mean": 0.22092103958129883,
+    "train_time_s_mean": 1.0535048007965089,
+    "fisa_accuracy": 0.6375
+  }
+]
