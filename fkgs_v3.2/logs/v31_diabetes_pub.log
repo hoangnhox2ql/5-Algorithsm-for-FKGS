@@ -1,0 +1,28 @@
+RUN 20260927T235329-40111b63 | dataset=diabetes | quick=False | steps=['PUB', 'REPORT']
+
+############################################################
+# PUB
+############################################################
+  PUB orig q1090 seed=42: argmax acc=0.6648, calib acc=0.6564, AUC=0.6837
+  PUB orig tertile seed=42: argmax acc=0.7585, calib acc=0.8018, AUC=0.8768
+  PUB orig tertile seed=1: argmax acc=0.7628, calib acc=0.7950, AUC=0.8745
+  PUB orig tertile seed=2: argmax acc=0.7578, calib acc=0.7997, AUC=0.8812
+  PUB orig tertile seed=3: argmax acc=0.7623, calib acc=0.8015, AUC=0.8752
+  PUB orig tertile seed=4: argmax acc=0.7430, calib acc=0.8124, AUC=0.8876
+  PUB pair q1090 seed=42: argmax acc=0.6644, calib acc=0.6858, AUC=0.6896
+  PUB pair q1090 seed=1: argmax acc=0.6644, calib acc=0.6441, AUC=0.6783
+  PUB pair q1090 seed=2: argmax acc=0.6644, calib acc=0.6738, AUC=0.7044
+  PUB pair q1090 seed=3: argmax acc=0.6644, calib acc=0.6466, AUC=0.6670
+  PUB pair q1090 seed=4: argmax acc=0.6644, calib acc=0.6601, AUC=0.6810
+  PUB pair tertile seed=42: argmax acc=0.6644, calib acc=0.7966, AUC=0.8272
+  PUB pair tertile seed=1: argmax acc=0.6644, calib acc=0.7749, AUC=0.8295
+  PUB pair tertile seed=2: argmax acc=0.6644, calib acc=0.7745, AUC=0.8336
+  PUB pair tertile seed=3: argmax acc=0.6644, calib acc=0.7986, AUC=0.8272
+  PUB pair tertile seed=4: argmax acc=0.6644, calib acc=0.8067, AUC=0.8353
+
+############################################################
+# REPORT
+############################################################
+  Đã tạo /home/claude/fkgs_v3/results/diabetes/report_tong_hop.md
+
+HOÀN TẤT 20260927T235329-40111b63 trong 7.9 phút

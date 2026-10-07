@@ -1,0 +1,20 @@
+  fold 0 xong
+  fold 1 xong
+  fold 2 xong
+  fold 3 xong
+  fold 4 xong
+                        auc            bacc        
+                       mean     std    mean     std
+scope    method                                    
+adjacent CFKGS       0.7627  0.0617  0.5024  0.0033
+         FKG_full    0.7705  0.0584  0.5012  0.0027
+         GreedyFKGS  0.7552  0.0580  0.5019  0.0039
+         SFKGS       0.7430  0.0749  0.5012  0.0027
+global   CFKGS       0.8008  0.0235  0.5024  0.0033
+         FKG_full    0.7930  0.0287  0.5012  0.0027
+         GreedyFKGS  0.8020  0.0276  0.5144  0.0288
+         SFKGS       0.7858  0.0366  0.5012  0.0027
+upper    CFKGS       0.6003  0.0317  0.5012  0.0027
+         FKG_full    0.5568  0.0516  0.5012  0.0027
+         GreedyFKGS  0.5852  0.0524  0.5049  0.0080
+         SFKGS       0.5855  0.0526  0.5012  0.0027
