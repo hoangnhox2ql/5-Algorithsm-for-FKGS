@@ -1,0 +1,19 @@
+{
+  "source": "BRSET THẬT — 5 fold (fold_01, fold_02, fold_03, fold_04, fold_05) tại /home/buiduyhoang/Code FKG-E/FKGE-v3.2/fkge_v3/data_real/BRSET_Data; 1 seed FKG-E mỗi fold",
+  "real_data": true,
+  "folds": [
+    "fold_01",
+    "fold_02",
+    "fold_03",
+    "fold_04",
+    "fold_05"
+  ],
+  "seeds_per_fold": 1,
+  "T_ep": 200,
+  "n_jobs": 4,
+  "main_metric": "balanced_accuracy",
+  "quick": false,
+  "only": null,
+  "started": "2026-10-07 17:40:37",
+  "elapsed_min": 101.45747140248616
+}

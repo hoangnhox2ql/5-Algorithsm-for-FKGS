@@ -1,0 +1,7 @@
+Dữ liệu thật đặt tại đây.
+  - BRSET_Data/fold_01 … fold_05/{TrainDataRule.csv, TestDataRule.csv}: BRSET đã chia 5 fold theo ID bệnh nhân.
+    Có thư mục này thì run_all.py và mọi kịch bản KB1–KB6, Ablation, Baseline tự chạy trên nó (experiments/common.py).
+  - (tuỳ chọn, JSON — định dạng trong README.md và data/fkg_io.py, tên theo config.py):
+      diabetes_kaggle_rules.json + diabetes_kaggle_test.json
+      healthcare_diabetes_rules.json + healthcare_diabetes_test.json
+      brset_fkgmm_rules.json + brset_test.json, brset_fkgs_rules.json (chỉ dùng khi KHÔNG có BRSET_Data)

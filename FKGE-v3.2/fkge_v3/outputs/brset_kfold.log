@@ -1,0 +1,28 @@
+[fold_01] n_train=1778 (nhóm 1074), n_test=242 (dương 20)
+   FISA : AUC=0.8660  BalAcc=0.5986  Sens=0.9000  Spec=0.2973  F1+=0.1856  Acc=0.3471
+   FKG-E: AUC=0.9387  BalAcc=0.8486  Sens=0.9000  Spec=0.7973  F1+=0.4337  Acc=0.8058
+   FKG-E: đồng thuận FISA=0.5331  Dev=0.5234  epoch=200 (T_ep)  ‖∇L‖=1.18e-01  | ms/truy vấn: FISA bảng tra 0.604, FISA tuần tự 14.584, FKG-E 0.150  | 251s
+[fold_02] n_train=1776 (nhóm 1121), n_test=242 (dương 19)
+   FISA : AUC=0.8892  BalAcc=0.6514  Sens=0.8947  Spec=0.4081  F1+=0.2024  Acc=0.4463
+   FKG-E: AUC=0.9450  BalAcc=0.8919  Sens=0.8421  Spec=0.9417  F1+=0.6667  Acc=0.9339
+   FKG-E: đồng thuận FISA=0.4959  Dev=0.5736  epoch=126 (early)  ‖∇L‖=2.15e-01  | ms/truy vấn: FISA bảng tra 0.630, FISA tuần tự 14.554, FKG-E 0.131  | 154s
+[fold_03] n_train=1776 (nhóm 1021), n_test=242 (dương 19)
+   FISA : AUC=0.8539  BalAcc=0.5241  Sens=0.0526  Spec=0.9955  F1+=0.0952  Acc=0.9215
+   FKG-E: AUC=0.9314  BalAcc=0.7603  Sens=0.5789  Spec=0.9417  F1+=0.5116  Acc=0.9132
+   FKG-E: đồng thuận FISA=0.9091  Dev=0.1758  epoch=200 (T_ep)  ‖∇L‖=1.09e-01  | ms/truy vấn: FISA bảng tra 0.612, FISA tuần tự 13.826, FKG-E 0.152  | 232s
+[fold_04] n_train=1780 (nhóm 1115), n_test=241 (dương 20)
+   FISA : AUC=0.8126  BalAcc=0.7683  Sens=0.6000  Spec=0.9367  F1+=0.5217  Acc=0.9087
+   FKG-E: AUC=0.9252  BalAcc=0.8298  Sens=0.7500  Spec=0.9095  F1+=0.5455  Acc=0.8963
+   FKG-E: đồng thuận FISA=0.9212  Dev=0.1699  epoch=184 (early)  ‖∇L‖=1.28e-01  | ms/truy vấn: FISA bảng tra 0.609, FISA tuần tự 13.974, FKG-E 0.152  | 210s
+[fold_05] n_train=1778 (nhóm 990), n_test=241 (dương 19)
+   FISA : AUC=0.8204  BalAcc=0.5735  Sens=0.8947  Spec=0.2523  F1+=0.1683  Acc=0.3029
+   FKG-E: AUC=0.8642  BalAcc=0.7956  Sens=0.7895  Spec=0.8018  F1+=0.3846  Acc=0.8008
+   FKG-E: đồng thuận FISA=0.4772  Dev=0.5715  epoch=200 (T_ep)  ‖∇L‖=1.59e-01  | ms/truy vấn: FISA bảng tra 0.593, FISA tuần tự 13.886, FKG-E 0.134  | 237s
+
+Tổng hợp 5 fold (trung bình ± SD):
+  auc                FISA 0.8484 ± 0.0319   FKG-E 0.9209 ± 0.0326
+  balanced_accuracy  FISA 0.6232 ± 0.0932   FKG-E 0.8253 ± 0.0503
+  sensitivity        FISA 0.6684 ± 0.3674   FKG-E 0.7721 ± 0.1218
+  specificity        FISA 0.5780 ± 0.3594   FKG-E 0.8784 ± 0.0732
+  f1_pos             FISA 0.2346 ± 0.1656   FKG-E 0.5084 ± 0.1088
+Đã lưu /home/claude/fkge/fkge_v3/outputs/brset_kfold.json và .md

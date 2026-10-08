@@ -1,0 +1,67 @@
+[
+  {
+    "method": "FISA (Chương 2)",
+    "accuracy": 0.5852988580638524,
+    "accuracy_std": 0.30554364857315447,
+    "balanced_accuracy": 0.6231893840364039,
+    "balanced_accuracy_std": 0.09321536074570982,
+    "auc": 0.8484113200843962,
+    "auc_std": 0.031904828737070644,
+    "f1": 0.45128683682690224,
+    "train_time_s": 0.1313807487487793,
+    "avg_ms_per_query": 0.2819077287786909,
+    "n_folds": 5
+  },
+  {
+    "method": "Node2Vec + kNN",
+    "accuracy": 0.8700558965741916,
+    "accuracy_std": 0.019577555910247683,
+    "balanced_accuracy": 0.8063265200211429,
+    "balanced_accuracy_std": 0.05560557931508486,
+    "auc": 0.8782331851649765,
+    "auc_std": 0.03897376687107746,
+    "f1": 0.6995096866687025,
+    "train_time_s": 0.9257752418518066,
+    "avg_ms_per_query": 0.03193482904292597,
+    "n_folds": 5
+  },
+  {
+    "method": "TransE + kNN",
+    "accuracy": 0.8642639141318884,
+    "accuracy_std": 0.040645540681257725,
+    "balanced_accuracy": 0.6764023551498042,
+    "balanced_accuracy_std": 0.10254252829233233,
+    "auc": 0.753297924263334,
+    "auc_std": 0.07773923127073333,
+    "f1": 0.6359921145320127,
+    "train_time_s": 1.119194459915161,
+    "avg_ms_per_query": 0.03238129585532714,
+    "n_folds": 5
+  },
+  {
+    "method": "DistMult + kNN",
+    "accuracy": 0.8617742875758718,
+    "accuracy_std": 0.02353818102418066,
+    "balanced_accuracy": 0.7411171036186655,
+    "balanced_accuracy_std": 0.05221355856275581,
+    "auc": 0.8234419274145635,
+    "auc_std": 0.05333231209155381,
+    "f1": 0.6656880509528403,
+    "train_time_s": 1.345879888534546,
+    "avg_ms_per_query": 0.032206732183280934,
+    "n_folds": 5
+  },
+  {
+    "method": "FKG-E (đề xuất)",
+    "accuracy": 0.8699975995336237,
+    "accuracy_std": 0.06234456550245279,
+    "balanced_accuracy": 0.8252535749080891,
+    "balanced_accuracy_std": 0.050255968289742575,
+    "auc": 0.9209128417389673,
+    "auc_std": 0.032593445248228624,
+    "f1": 0.7163216275047466,
+    "train_time_s": 107.10721349716187,
+    "avg_ms_per_query": 0.0704000697762693,
+    "n_folds": 5
+  }
+]
